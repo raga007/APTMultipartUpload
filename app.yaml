@@ -1,0 +1,15 @@
+application: aptsimpleuploadtest
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+builtins:
+- deferred: on
+
+handlers:
+- url: /web
+  static_dir: web
+
+- url: /.*
+  script: main.app
